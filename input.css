@@ -1,0 +1,10 @@
+/* input.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Your existing CSS files */
+@import "./css/webflow-style.css";
+@import "./css/style.css";
+@import "./css/navbar.css";
+@import "./css/language-switcher.css";

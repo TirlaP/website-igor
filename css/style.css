@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+@layer components {
+	.nav-link {
+		@apply px-4 py-2 text-gray-700 hover:text-vitros-primary transition-colors;
+	}
+
+	.btn-primary {
+		@apply px-6 py-2 bg-vitros-primary text-white rounded-lg hover:bg-opacity-90 transition-colors;
+	}
+}
