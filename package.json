@@ -2,9 +2,9 @@
 	"name": "exflow-relume-style-guide-6d1e49",
 	"version": "1.0.0",
 	"scripts": {
-		"dev": "tailwindcss -i ./styles/tailwind.css -o ./dist/css/output.css --watch",
-		"build": "npm run copy-html && tailwindcss -i ./styles/tailwind.css -o ./dist/css/output.css --minify",
-		"copy-html": "mkdir -p dist && cp src/index.html dist/"
+		"dev": "tailwindcss -i ./styles/tailwind.css -o ./css/output.css --watch",
+		"build": "tailwindcss -i ./styles/tailwind.css -o ./css/output.css --minify && npm run copy-html",
+		"copy-html": "cp src/index.html ."
 	},
 	"devDependencies": {
 		"tailwindcss": "^3.4.14",
