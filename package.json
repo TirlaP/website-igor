@@ -3,8 +3,7 @@
 	"version": "1.0.0",
 	"scripts": {
 		"dev": "tailwindcss -i ./styles/tailwind.css -o ./css/output.css --watch",
-		"build": "tailwindcss -i ./styles/tailwind.css -o ./css/output.css --minify && npm run copy-html",
-		"copy-html": "cp index.html ."
+		"build": "tailwindcss -i ./styles/tailwind.css -o ./css/output.css --minify"
 	},
 	"devDependencies": {
 		"tailwindcss": "^3.4.14",
