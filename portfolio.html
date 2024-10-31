@@ -3,15 +3,16 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Artistry in Glass - VITROS Portfolio</title>
+		<title>Portfolio - Artistry in Glass</title>
 		<link href="css/output.css" rel="stylesheet" type="text/css" />
 		<link href="css/webflow-style.css" rel="stylesheet" type="text/css" />
 		<link href="css/style.css" rel="stylesheet" type="text/css" />
 		<link href="css/navbar.css" rel="stylesheet" type="text/css" />
 		<link href="css/language-switcher.css" rel="stylesheet" type="text/css" />
 
-		<script type="module" src="/js/translations.js"></script>
+		<script type="module" src="js/translations.js"></script>
 		<script type="module" src="js/script.js"></script>
+		<script type="module" src="js/portfolio/portfolio-grid.js"></script>
 	</head>
 	<body class="bg-white">
 		<div id="navbar-container"></div>
@@ -149,477 +150,38 @@
 			</div>
 		</section>
 
-		<!-- Category Navigation -->
-		<section id="portfolio-section" class="py-16 bg-gray-50">
+		<!-- Portfolio Grid Section -->
+		<section id="portfolio-section" class="py-16">
 			<div class="max-w-7xl mx-auto px-4">
 				<!-- Category Pills -->
-				<div class="flex flex-wrap justify-center gap-4 mb-12">
-					<!-- All Works -->
+				<div class="flex justify-center gap-4 mb-12">
 					<button
-						class="category-btn group relative px-8 py-3 rounded-full bg-white hover:bg-vitros-primary transition-all duration-300"
+						class="category-btn px-6 py-2 bg-vitros-primary text-white rounded-full"
 					>
-						<span
-							class="relative z-10 text-gray-900 group-hover:text-white transition-colors"
-							>All Works</span
-						>
-						<div
-							class="absolute inset-0 rounded-full bg-vitros-primary/10 group-hover:bg-vitros-primary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"
-						></div>
+						<span>All Works</span>
 					</button>
-
-					<!-- Restorations -->
 					<button
-						class="category-btn group relative px-8 py-3 rounded-full bg-white hover:bg-vitros-primary transition-all duration-300"
+						class="category-btn px-6 py-2 bg-white text-gray-900 rounded-full"
 					>
-						<span
-							class="relative z-10 text-gray-900 group-hover:text-white transition-colors"
-							>Restorations</span
-						>
-						<div
-							class="absolute inset-0 rounded-full bg-vitros-primary/10 group-hover:bg-vitros-primary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"
-						></div>
+						<span>Churches</span>
 					</button>
-
-					<!-- Churches -->
 					<button
-						class="category-btn group relative px-8 py-3 rounded-full bg-white hover:bg-vitros-primary transition-all duration-300"
+						class="category-btn px-6 py-2 bg-white text-gray-900 rounded-full"
 					>
-						<span
-							class="relative z-10 text-gray-900 group-hover:text-white transition-colors"
-							>Churches</span
-						>
-						<div
-							class="absolute inset-0 rounded-full bg-vitros-primary/10 group-hover:bg-vitros-primary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"
-						></div>
+						<span>Modern</span>
 					</button>
-
-					<!-- Modern -->
 					<button
-						class="category-btn group relative px-8 py-3 rounded-full bg-white hover:bg-vitros-primary transition-all duration-300"
+						class="category-btn px-6 py-2 bg-white text-gray-900 rounded-full"
 					>
-						<span
-							class="relative z-10 text-gray-900 group-hover:text-white transition-colors"
-							>Modern</span
-						>
-						<div
-							class="absolute inset-0 rounded-full bg-vitros-primary/10 group-hover:bg-vitros-primary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"
-						></div>
+						<span>Restorations</span>
 					</button>
 				</div>
 
-				<!-- Search and Filter Bar -->
+				<!-- Portfolio Grid -->
 				<div
-					class="flex flex-col md:flex-row gap-4 items-center justify-between mb-12"
+					class="portfolio-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
 				>
-					<!-- Search Bar -->
-					<div class="relative w-full md:w-96">
-						<input
-							type="text"
-							placeholder="Search projects..."
-							class="w-full px-4 py-3 pl-12 rounded-lg border border-gray-200 focus:border-vitros-primary focus:ring-2 focus:ring-vitros-primary/20 transition-all"
-						/>
-						<svg
-							class="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"
-							fill="none"
-							stroke="currentColor"
-							viewBox="0 0 24 24"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-							/>
-						</svg>
-					</div>
-
-					<!-- Filter Dropdown -->
-					<div class="relative group">
-						<button
-							class="px-6 py-3 rounded-lg bg-white border border-gray-200 hover:border-vitros-primary flex items-center gap-2 transition-colors"
-						>
-							<span>Filter</span>
-							<svg
-								class="w-5 h-5 transform group-hover:rotate-180 transition-transform"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M19 9l-7 7-7-7"
-								/>
-							</svg>
-						</button>
-
-						<!-- Dropdown Content -->
-						<div
-							class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50"
-						>
-							<div class="p-2">
-								<div class="space-y-2">
-									<label
-										class="flex items-center space-x-2 p-2 hover:bg-gray-50 rounded cursor-pointer"
-									>
-										<input
-											type="checkbox"
-											class="rounded border-gray-300 text-vitros-primary focus:ring-vitros-primary"
-										/>
-										<span>Latest First</span>
-									</label>
-									<label
-										class="flex items-center space-x-2 p-2 hover:bg-gray-50 rounded cursor-pointer"
-									>
-										<input
-											type="checkbox"
-											class="rounded border-gray-300 text-vitros-primary focus:ring-vitros-primary"
-										/>
-										<span>Oldest First</span>
-									</label>
-									<label
-										class="flex items-center space-x-2 p-2 hover:bg-gray-50 rounded cursor-pointer"
-									>
-										<input
-											type="checkbox"
-											class="rounded border-gray-300 text-vitros-primary focus:ring-vitros-primary"
-										/>
-										<span>Most Popular</span>
-									</label>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Portfolio Grid -->
-		<section class="py-16">
-			<div class="max-w-7xl mx-auto px-4">
-				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-					<!-- Project 1 - Gothic Revival -->
-					<article
-						class="group relative overflow-hidden rounded-xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500"
-					>
-						<div class="aspect-w-3 aspect-h-4 bg-gray-100">
-							<img
-								src="images/image_67528705-p-1600.webp"
-								alt="Gothic Revival Stained Glass"
-								class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
-							/>
-							<div
-								class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-							>
-								<div
-									class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-6 group-hover:translate-y-0 transition-transform duration-500"
-								>
-									<h3 class="text-2xl font-bold text-white mb-2"
-										>Gothic Revival</h3
-									>
-									<p class="text-gray-300 mb-4"
-										>Historic church window restoration showcasing intricate
-										details and masterful craftsmanship.</p
-									>
-									<div class="flex items-center gap-4">
-										<a
-											href="#"
-											class="text-white hover:text-vitros-primary transition-colors"
-											>View Project</a
-										>
-										<span class="text-gray-400">|</span>
-										<button
-											class="text-white hover:text-vitros-primary transition-colors"
-										>
-											<svg
-												class="w-6 h-6"
-												fill="none"
-												stroke="currentColor"
-												viewBox="0 0 24 24"
-											>
-												<path
-													stroke-linecap="round"
-													stroke-linejoin="round"
-													stroke-width="2"
-													d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-												/>
-											</svg>
-										</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</article>
-
-					<!-- Project 2 - Modern Abstract -->
-					<article
-						class="group relative overflow-hidden rounded-xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500"
-					>
-						<div class="aspect-w-3 aspect-h-4 bg-gray-100">
-							<img
-								src="images/image_123650291-20-2-p-2000.webp"
-								alt="Modern Abstract Design"
-								class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
-							/>
-							<div
-								class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-							>
-								<div
-									class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-6 group-hover:translate-y-0 transition-transform duration-500"
-								>
-									<h3 class="text-2xl font-bold text-white mb-2"
-										>Modern Abstract</h3
-									>
-									<p class="text-gray-300 mb-4"
-										>Contemporary design featuring geometric patterns and
-										vibrant colors.</p
-									>
-									<div class="flex items-center gap-4">
-										<a
-											href="#"
-											class="text-white hover:text-vitros-primary transition-colors"
-											>View Project</a
-										>
-										<span class="text-gray-400">|</span>
-										<button
-											class="text-white hover:text-vitros-primary transition-colors"
-										>
-											<svg
-												class="w-6 h-6"
-												fill="none"
-												stroke="currentColor"
-												viewBox="0 0 24 24"
-											>
-												<path
-													stroke-linecap="round"
-													stroke-linejoin="round"
-													stroke-width="2"
-													d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-												/>
-											</svg>
-										</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</article>
-
-					<!-- Project 3 - Nature-Inspired -->
-					<article
-						class="group relative overflow-hidden rounded-xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500"
-					>
-						<div class="aspect-w-3 aspect-h-4 bg-gray-100">
-							<img
-								src="images/img-9178.webp"
-								alt="Nature-Inspired Design"
-								class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
-							/>
-							<div
-								class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-							>
-								<div
-									class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-6 group-hover:translate-y-0 transition-transform duration-500"
-								>
-									<h3 class="text-2xl font-bold text-white mb-2"
-										>Nature's Symphony</h3
-									>
-									<p class="text-gray-300 mb-4"
-										>Floral patterns inspired by natural elements and organic
-										forms.</p
-									>
-									<div class="flex items-center gap-4">
-										<a
-											href="#"
-											class="text-white hover:text-vitros-primary transition-colors"
-											>View Project</a
-										>
-										<span class="text-gray-400">|</span>
-										<button
-											class="text-white hover:text-vitros-primary transition-colors"
-										>
-											<svg
-												class="w-6 h-6"
-												fill="none"
-												stroke="currentColor"
-												viewBox="0 0 24 24"
-											>
-												<path
-													stroke-linecap="round"
-													stroke-linejoin="round"
-													stroke-width="2"
-													d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-												/>
-											</svg>
-										</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</article>
-
-					<!-- Project 4 - Victorian Restoration -->
-					<article
-						class="group relative overflow-hidden rounded-xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500"
-					>
-						<div class="aspect-w-3 aspect-h-4 bg-gray-100">
-							<img
-								src="images/image_123650291.webp"
-								alt="Victorian Restoration"
-								class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
-							/>
-							<div
-								class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-							>
-								<div
-									class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-6 group-hover:translate-y-0 transition-transform duration-500"
-								>
-									<h3 class="text-2xl font-bold text-white mb-2"
-										>Victorian Elegance</h3
-									>
-									<p class="text-gray-300 mb-4"
-										>Restoration of a 19th-century Victorian mansion's stained
-										glass windows.</p
-									>
-									<div class="flex items-center gap-4">
-										<a
-											href="#"
-											class="text-white hover:text-vitros-primary transition-colors"
-											>View Project</a
-										>
-										<span class="text-gray-400">|</span>
-										<button
-											class="text-white hover:text-vitros-primary transition-colors"
-										>
-											<svg
-												class="w-6 h-6"
-												fill="none"
-												stroke="currentColor"
-												viewBox="0 0 24 24"
-											>
-												<path
-													stroke-linecap="round"
-													stroke-linejoin="round"
-													stroke-width="2"
-													d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-												/>
-											</svg>
-										</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</article>
-
-					<!-- Project 5 - Contemporary Art -->
-					<article
-						class="group relative overflow-hidden rounded-xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500"
-					>
-						<div class="aspect-w-3 aspect-h-4 bg-gray-100">
-							<img
-								src="images/img_20160225_173051.webp"
-								alt="Contemporary Art"
-								class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
-							/>
-							<div
-								class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-							>
-								<div
-									class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-6 group-hover:translate-y-0 transition-transform duration-500"
-								>
-									<h3 class="text-2xl font-bold text-white mb-2"
-										>Modern Fusion</h3
-									>
-									<p class="text-gray-300 mb-4"
-										>Contemporary art piece merging traditional techniques with
-										modern design.</p
-									>
-									<div class="flex items-center gap-4">
-										<a
-											href="#"
-											class="text-white hover:text-vitros-primary transition-colors"
-											>View Project</a
-										>
-										<span class="text-gray-400">|</span>
-										<button
-											class="text-white hover:text-vitros-primary transition-colors"
-										>
-											<svg
-												class="w-6 h-6"
-												fill="none"
-												stroke="currentColor"
-												viewBox="0 0 24 24"
-											>
-												<path
-													stroke-linecap="round"
-													stroke-linejoin="round"
-													stroke-width="2"
-													d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-												/>
-											</svg>
-										</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</article>
-
-					<!-- Add 4 more projects following the same template -->
-					<!-- Project 6 - Sacred Space -->
-					<article
-						class="group relative overflow-hidden rounded-xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500"
-					>
-						<div class="aspect-w-3 aspect-h-4 bg-gray-100">
-							<img
-								src="images/img_20160317_123501.webp"
-								alt="Sacred Space Design"
-								class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
-							/>
-							<!-- Same overlay structure -->
-						</div>
-					</article>
-
-					<!-- Project 7 -->
-					<article
-						class="group relative overflow-hidden rounded-xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500"
-					>
-						<div class="aspect-w-3 aspect-h-4 bg-gray-100">
-							<img
-								src="images/img-9200.webp"
-								alt="Residential Project"
-								class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
-							/>
-							<!-- Same overlay structure -->
-						</div>
-					</article>
-
-					<!-- Project 8 -->
-					<article
-						class="group relative overflow-hidden rounded-xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500"
-					>
-						<div class="aspect-w-3 aspect-h-4 bg-gray-100">
-							<img
-								src="images/img-9213.webp"
-								alt="Commercial Project"
-								class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
-							/>
-							<!-- Same overlay structure -->
-						</div>
-					</article>
-
-					<!-- Project 9 -->
-					<article
-						class="group relative overflow-hidden rounded-xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500"
-					>
-						<div class="aspect-w-3 aspect-h-4 bg-gray-100">
-							<img
-								src="images/img-9217.webp"
-								alt="Modern Installation"
-								class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
-							/>
-							<!-- Same overlay structure -->
-						</div>
-					</article>
+					<!-- Items will be dynamically inserted here -->
 				</div>
 			</div>
 		</section>
@@ -677,7 +239,7 @@
 			<div class="max-w-7xl mx-auto px-4">
 				<h2 class="text-4xl font-bold text-center mb-16">Our Process</h2>
 				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-					<!-- Process Step -->
+					<!-- Initial Consultation -->
 					<div class="relative group">
 						<div
 							class="absolute inset-0 bg-vitros-primary/5 rounded-xl transform rotate-3 group-hover:rotate-0 transition-transform duration-300"
@@ -688,92 +250,111 @@
 							>
 								<span class="text-vitros-primary text-xl font-bold">1</span>
 							</div>
-							<h3 class="text-xl font-bold mb-4">Consultation</h3>
+							<h3 class="text-xl font-bold mb-4">Initial Consultation</h3>
 							<p class="text-gray-600"
-								>We begin with understanding your vision and requirements,
-								ensuring every detail is captured.</p
+								>We begin with understanding your vision, requirements, and the
+								architectural context of your space.</p
 							>
 						</div>
 					</div>
-					<!-- Add more process steps -->
+
+					<!-- Design & Planning -->
+					<div class="relative group">
+						<div
+							class="absolute inset-0 bg-vitros-primary/5 rounded-xl transform rotate-3 group-hover:rotate-0 transition-transform duration-300"
+						></div>
+						<div class="relative bg-white p-8 rounded-xl shadow-lg">
+							<div
+								class="w-12 h-12 bg-vitros-primary/10 rounded-full flex items-center justify-center mb-6"
+							>
+								<span class="text-vitros-primary text-xl font-bold">2</span>
+							</div>
+							<h3 class="text-xl font-bold mb-4">Design & Planning</h3>
+							<p class="text-gray-600"
+								>Our artists create detailed designs and select materials that
+								perfectly match your vision and specifications.</p
+							>
+						</div>
+					</div>
+
+					<!-- Crafting & Creation -->
+					<div class="relative group">
+						<div
+							class="absolute inset-0 bg-vitros-primary/5 rounded-xl transform rotate-3 group-hover:rotate-0 transition-transform duration-300"
+						></div>
+						<div class="relative bg-white p-8 rounded-xl shadow-lg">
+							<div
+								class="w-12 h-12 bg-vitros-primary/10 rounded-full flex items-center justify-center mb-6"
+							>
+								<span class="text-vitros-primary text-xl font-bold">3</span>
+							</div>
+							<h3 class="text-xl font-bold mb-4">Crafting & Creation</h3>
+							<p class="text-gray-600"
+								>Expert artisans bring the design to life using traditional
+								techniques and modern precision tools.</p
+							>
+						</div>
+					</div>
+
+					<!-- Quality Assurance -->
+					<div class="relative group">
+						<div
+							class="absolute inset-0 bg-vitros-primary/5 rounded-xl transform rotate-3 group-hover:rotate-0 transition-transform duration-300"
+						></div>
+						<div class="relative bg-white p-8 rounded-xl shadow-lg">
+							<div
+								class="w-12 h-12 bg-vitros-primary/10 rounded-full flex items-center justify-center mb-6"
+							>
+								<span class="text-vitros-primary text-xl font-bold">4</span>
+							</div>
+							<h3 class="text-xl font-bold mb-4">Quality Assurance</h3>
+							<p class="text-gray-600"
+								>Rigorous quality checks ensure every piece meets our exacting
+								standards for durability and beauty.</p
+							>
+						</div>
+					</div>
+
+					<!-- Installation -->
+					<div class="relative group">
+						<div
+							class="absolute inset-0 bg-vitros-primary/5 rounded-xl transform rotate-3 group-hover:rotate-0 transition-transform duration-300"
+						></div>
+						<div class="relative bg-white p-8 rounded-xl shadow-lg">
+							<div
+								class="w-12 h-12 bg-vitros-primary/10 rounded-full flex items-center justify-center mb-6"
+							>
+								<span class="text-vitros-primary text-xl font-bold">5</span>
+							</div>
+							<h3 class="text-xl font-bold mb-4">Installation</h3>
+							<p class="text-gray-600"
+								>Professional installation by our experienced team ensures
+								perfect fitting and protection.</p
+							>
+						</div>
+					</div>
+
+					<!-- Aftercare -->
+					<div class="relative group">
+						<div
+							class="absolute inset-0 bg-vitros-primary/5 rounded-xl transform rotate-3 group-hover:rotate-0 transition-transform duration-300"
+						></div>
+						<div class="relative bg-white p-8 rounded-xl shadow-lg">
+							<div
+								class="w-12 h-12 bg-vitros-primary/10 rounded-full flex items-center justify-center mb-6"
+							>
+								<span class="text-vitros-primary text-xl font-bold">6</span>
+							</div>
+							<h3 class="text-xl font-bold mb-4">Aftercare</h3>
+							<p class="text-gray-600"
+								>Ongoing support and maintenance services to ensure your artwork
+								remains pristine for generations.</p
+							>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
-
-		<!-- Contact CTA -->
-		<section class="relative py-24 overflow-hidden">
-			<div class="absolute inset-0 bg-vitros-secondary opacity-90"></div>
-			<div class="absolute inset-0">
-				<!-- Decorative background pattern -->
-				<svg
-					class="absolute w-full h-full"
-					viewBox="0 0 100 100"
-					preserveAspectRatio="none"
-				>
-					<!-- Add pattern paths -->
-				</svg>
-			</div>
-			<div class="relative z-10 max-w-4xl mx-auto text-center px-4">
-				<h2 class="text-4xl md:text-5xl font-bold text-white mb-6"
-					>Ready to Transform Your Space?</h2
-				>
-				<p class="text-xl text-gray-300 mb-8"
-					>Let's create something extraordinary together.</p
-				>
-				<a
-					href="/contact.html"
-					class="inline-block bg-white text-vitros-secondary px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors"
-				>
-					Start Your Project
-				</a>
-			</div>
-		</section>
-
-		<!-- Additional Scripts -->
-		<script>
-			// Intersection Observer for animations
-			const observerOptions = {
-				root: null,
-				rootMargin: "0px",
-				threshold: 0.1,
-			};
-
-			const observer = new IntersectionObserver((entries) => {
-				entries.forEach((entry) => {
-					if (entry.isIntersecting) {
-						entry.target.classList.add("animate-fade-in");
-						entry.target.classList.add("animate-slide-up");
-					}
-				});
-			}, observerOptions);
-
-			// Observe elements
-			document.querySelectorAll(".portfolio-item").forEach((item) => {
-				observer.observe(item);
-			});
-
-			// Parallax effect
-			window.addEventListener("scroll", () => {
-				const scrolled = window.pageYOffset;
-				document.querySelectorAll(".parallax").forEach((element) => {
-					const speed = element.dataset.speed || 0.5;
-					element.style.transform = `translateY(${scrolled * speed}px)`;
-				});
-			});
-
-			// Category filter functionality
-			document.querySelectorAll(".category-btn").forEach((btn) => {
-				btn.addEventListener("click", () => {
-					// Remove active class from all buttons
-					document.querySelectorAll(".category-btn").forEach((b) => {
-						b.classList.remove("active");
-					});
-					// Add active class to clicked button
-					btn.classList.add("active");
-					// Filter items logic here
-				});
-			});
-		</script>
 
 		<div id="footer-container"></div>
 	</body>

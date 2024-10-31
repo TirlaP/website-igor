@@ -17,7 +17,7 @@ const translations = {
 			},
 		},
 		hero: {
-			title: "VITROS: Tradition Trifft Handwerkskunst in Buntglas",
+			title: "VITROS: die Buntglas-Werkstatt",
 			subtitle:
 				"Die Arbeit von mir basiert auf der englischen Buntglas-Tradition und beinhaltet Design, Produktion und Restauration.",
 			cta: {
@@ -162,7 +162,7 @@ const translations = {
 			},
 		},
 		hero: {
-			title: "VITROS: Tradition Meets Craftsmanship in Stained Glass",
+			title: "VITROS: Stained Glass Workshop",
 			subtitle:
 				"VITROS' work is based on English tradition of stained glass, and includes design, production and restoration of stained-glass windows.",
 			cta: {
